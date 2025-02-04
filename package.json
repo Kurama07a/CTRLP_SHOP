@@ -1,0 +1,43 @@
+{
+  "author": "CTRL-P.dev",
+  "name": "ctrl-p",
+  "version": "1.0.0",
+  "description": "An Electron app to list installed printers",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "ctrlp",
+    "productName": "CTRL+P",
+    "files": [
+      "node_modules/",
+      "main.js",
+      "package.json",
+      "renderer.js",
+      "index.html",
+      ".env",
+      "icon.jpg",
+      "blue.png",
+      "white.png"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.jpg"
+    }
+  },
+  "dependencies": {
+    "@electron/remote": "^2.1.2",
+    "@supabase/supabase-js": "^2.45.4",
+    "axios": "^1.7.7",
+    "pdf-lib": "^1.17.1",
+    "pdf-to-printer": "^5.6.0",
+    "systeminformation": "^5.25.11",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "electron": "^32.1.2",
+    "electron-builder": "^25.1.8"
+  }
+}
